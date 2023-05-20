@@ -5,7 +5,6 @@ import io.quarkus.oidc.token.propagation.reactive.AccessTokenRequestReactiveFilt
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
-import org.eclipse.microprofile.rest.client.annotation.RegisterClientHeaders;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -13,7 +12,6 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 @RegisterRestClient
 @RegisterProvider(AccessTokenRequestReactiveFilter.class)
 @ApplicationScoped
-@RegisterClientHeaders
 public interface ProposalRestClient {
 
     @GET
