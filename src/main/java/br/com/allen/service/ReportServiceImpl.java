@@ -5,6 +5,7 @@ import br.com.allen.dto.OpportunityDTO;
 import br.com.allen.utils.CSVUtils;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.io.ByteArrayInputStream;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 public class ReportServiceImpl implements ReportService {
 
     @Inject
+    @RestClient
     ReportRestClient reportRestClient;
 
     @Override
