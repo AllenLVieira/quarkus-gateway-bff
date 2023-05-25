@@ -2,6 +2,7 @@ package br.com.allen.controller;
 
 import br.com.allen.service.ReportService;
 import jakarta.annotation.security.RolesAllowed;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -12,6 +13,7 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.Date;
 
+@ApplicationScoped
 @Path("/api/opportunity")
 public class ReportController {
 
